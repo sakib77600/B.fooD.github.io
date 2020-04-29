@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Teko:300,400&display=swap');
+
+a {
+    color: #fff !important;
+}
+
+p {
+    margin: 0;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* header */
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(16,29,44,.92),rgba(16,29,44,.92)),url(images/hero.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+header > .container {
+    position: relative;
+    height: 100%;
+    padding: 0;
+}
+
+.navbar-brand {
+    position: absolute;
+    width: 140%;
+    max-width: 140px;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 650ms;
+}
+
+.navbar-brand:hover {
+    opacity: .8;
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 25px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    background-color: #101d2c;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.hamburger-menu i{
+    font-size: 30px;
+    color: #F59526;
+    margin: auto;
+}
+
+.hamburger-menu .fa-times {
+    display: none;
+}
+
+.hamburger-menu .fa-times.open {
+    display: block;
+}
+
+.hamburger-menu .fa-bars.open {
+    display: none;
+}
+
+.nav-list {
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    list-style: none;
+    background-color:  #101d2c;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 650ms;
+}
+
+.nav-list.open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text h1{
+    font-family: 'Niconne',cursive;
+    color: #F59526;
+}
+
+.btn {
+    width: 100px;
+    padding: 5px 0!important;
+    border: 1px solid #F59526;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(225, 225, 255, .3), transparent);
+    transition: all 950ms;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* about */
+
+.about {
+    background-color: ;
+}
+
+.section-heading h4 {
+    text-transform: uppercase;
+    font-family: 'Teko', sans-serif;
+    color: #101d2c;
+    line-height: 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.section-heading h1 {
+    font-family: 'Niconne',cursive;
+    color: #F59526;
+}
+
+.about .btn {
+    background: #F59526;
+    color: #000;
+}
+
+.menu {
+    background-color: #101d2c;
+}
+
+.shop-info i{
+    font-size: 50px;
+    color: #F59526;
+}
+
+.shop-info h1 {
+    font-family: 'Teko' sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.shop-info p,
+.shop-info address {
+    color: rgba(255, 255, 255, .5);
+}
+
+hr {
+    border: 1px solid rgba(255, 255, 255, .09);
+}
+
+
+
+.point-right,
+.point-left {
+    display: flex;
+    background-color: #fff;
+    position: relative;
+}
+
+.point-left::before,
+.point-right::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: inherit;
+    left: 50%;
+    top: -12px;
+    transform: translateX(-50%);
+    z-index: 1;
+    transform: rotate(45deg);
+}
+
+.menu-item-desc {
+    padding: 50px 10px;
+    margin: auto;
+    color: #212529;
+}
+
+.menu-item-desc h6 {
+    color: #F59526;
+    font-size: 20px;
+}
+
+.menu-item-desc h1 {
+    color: #101d2c;
+    font-size: 30px;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+
+/* shfe section */
+
+
+.card-body h1 {
+    font-size: 25px;
+    font-weight: 300;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 1px;
+}
+
+.card-body h6 {
+    color: #F59526;
+    font-size: 16px;
+}
+
+.card-body p {
+    font-weight: 300;
+} 
+
+footer {
+    background-color: #101d2c;
+    color: rgba(255, 255, 255, .5);
+}
+
+
+
+@media (min-width: 567px) {
+    .navbar-brand {
+        max-width: 170px;
+    }
+    
+    .hamburger-menu {
+        top: 35px;
+        right: 25px;
+    }
+    
+      
+    .point-left::before,
+    .point-right::before {
+        display: none;
+    }
+    
+    .menu-item-desc {
+        padding: 50px 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .btn {
+        width: 150px;
+    }
+  
+}
+
+@media (min-width: 992px) {
+    header > .container {
+        padding: 0 15px;
+    }
+    
+    .hamburger-menu {
+        display: none;
+    }
+    
+    .navbar-brand {
+        position: initial;
+        transform: initial;
+    }
+    
+    .nav-list {
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: initial;
+        flex-direction: initial;
+        opacity: initial;
+        transform: initial;
+        transition: initial;
+        margin: initial;
+        padding: initial;
+        
+    }
+    
+    .nav-item {
+        margin: 0 70px;
+    }
+    
+    .nav-item:last-child {
+        margin-right: 0;
+    }
+    
+    .nav-link {
+        position: relative;
+        padding: 0;
+    }
+    
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 2px;
+        background-color: #F59526;
+        transform: scale(0);
+        transform-origin: left;
+        transition: transform 1s;
+    }
+    
+    .nav-link:hover::before {
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 1200px) {
+    .point-left::before,
+    .point-right::before {
+        display: block;
+        top: 50%;
+        left: inherit;
+        transform: translate(0, -50%)rotate(45deg);
+    }
+    
+    .point-left::before {
+        left: -12px;
+    }
+    
+    .point-right::before {
+        right: -12px;
+    }
+    
+    .menu-item-desc p {
+        display: none;
+    }
+    
+    .menu-item-desc .btn {
+        color: #fff !important;
+        background-color: #F59526;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
